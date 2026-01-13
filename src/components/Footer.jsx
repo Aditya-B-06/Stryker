@@ -5,10 +5,10 @@ export default function Footer1() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              YourBrand
+              Stryker
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-              Building the future, one step at a time.
+             Power. Precision. Delivered.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function Footer1() {
 
         <div className="pt-8 border-t border-gray-200 dark:border-zinc-800 text-center">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            © 2024 YourBrand. All rights reserved.
+            © 2024 Stryker All rights reserved.
           </p>
         </div>
       </div>
