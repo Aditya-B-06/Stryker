@@ -41,7 +41,7 @@ export default function LightArms() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>${item.price}</span>
+
             </div>
           </div>
         </div>
