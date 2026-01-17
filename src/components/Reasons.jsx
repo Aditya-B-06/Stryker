@@ -93,7 +93,7 @@ function Reasons() {
     }}
     transition={{ duration: 0.3, ease: "easeIn" }}
   >
-    <button onClick={()=> navigate("/light-arms",{replace:true})}>
+    <button onClick={()=> navigate("/light-arms",{replace:true})} className='hover:cursor-pointer'>
       Click here to shop now!
     </button>
     

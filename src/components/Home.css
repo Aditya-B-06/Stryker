@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 .hero {
   margin-top: 40px;
   position: relative;
@@ -38,6 +39,7 @@
   color: white;
   max-width: 420px;
   text-align: center;
+  font-family: "Lexend", sans-serif;
 }
 
 .hero-content h1 {
@@ -46,7 +48,7 @@
   opacity: 0;
   animation: textSlideIn 1s ease-out forwards;
   animation-delay: 1.3s;
-  font-family: 'Michroma';
+  font-family: "Michroma", cursive;
 }
 
 @keyframes textSlideIn {
@@ -63,7 +65,7 @@
 .hero-content p {
   opacity: 0.85;
   margin-bottom: 1.2rem;
-  font-family: 'Michroma';
+  font-family: "Lexend", sans-serif;
   letter-spacing: 0.15rem;
 }
 
@@ -73,7 +75,7 @@
   text-align: center;
  
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* subtle white glow */
-  font-family: 'Michroma'
+  font-family: "Lexend", sans-serif;
 }
 
 

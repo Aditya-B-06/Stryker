@@ -1,16 +1,18 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { ShoppingCart, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import {useSelector} from "react-redux";
 
 export default function NavBar() {
   const location = useLocation();
+  const displayNos = useSelector((state)=>(state.cart.cartSize))
 
   const links = [
     { name: "Home", path: "/home" },
     { name: "Light Arms", path: "/light-arms" },
     { name: "Medium Arms", path: "/medium-arms" },
     { name: "Ammunition", path: "/ammos" },
-    { name: "Combos", path: "/combos" },
+    { name: "Accessories", path: "/accessories" },
   ];
 
   return (
@@ -54,8 +56,17 @@ export default function NavBar() {
 
       <div className="flex flex-row gap-5">
         <Heart className="size-10" />
-        <ShoppingCart className="text-white mr-6 size-10" />
+        <div className="relative">
+          <ShoppingCart className="text-white size-10" />
+          <div className="absolute -top-1 -right-1 w-6 h-6
+                    bg-red-600 text-white
+                    flex items-center justify-center
+                    rounded-full">
+            {displayNos}
+          </div>
+        </div>
       </div>
+
     </header>
   );
 }
