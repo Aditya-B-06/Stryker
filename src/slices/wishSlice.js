@@ -10,12 +10,22 @@ export const wishSlice = createSlice({
   initialState,
   reducers:{
     addToWishList:(state,action)=>{
-      state.wishList.push(product)
-      state.wishListQty = state.wishList.length
+      const exists = state.wishList.some(
+          item => item.id === action.payload.id
+      )
+      if (!exists) {
+        state.wishList.push(action.payload)
+        state.wishListQty++
+      }
     },
     removeFromWishList:(state,action) =>{
-      state.wishList.filter((items) => items.id !== action.payload.id)
-      state.wishListQty = state.wishList.length
+      const exists = state.wishList.some(
+          item => item.id === action.payload.id
+      )
+      if (exists) {
+        state.wishList.pop(action.payload)
+        state.wishListQty--
+      }
     }
   }
 })

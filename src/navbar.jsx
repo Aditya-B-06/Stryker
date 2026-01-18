@@ -7,6 +7,7 @@ export default function NavBar() {
   const location = useLocation();
   const displayNos = useSelector((state)=>(state.cart.cartSize))
 
+  const displayLiked = useSelector((state)=>state.wish.wishListQty)
   const links = [
     { name: "Home", path: "/home" },
     { name: "Light Arms", path: "/light-arms" },
@@ -55,7 +56,18 @@ export default function NavBar() {
       </div>
 
       <div className="flex flex-row gap-5">
-        <Heart className="size-10" />
+
+        <div className="relative hover:cursor-pointer">
+          <Heart className="text-white size-10" />
+          <div className="absolute -top-1 -right-1 w-6 h-6
+                    bg-red-600 text-white
+                    flex items-center justify-center
+                    rounded-full">
+
+            {displayLiked}
+          </div>
+        </div>
+
         <div className="relative">
           <ShoppingCart className="text-white size-10" />
           <div className="absolute -top-1 -right-1 w-6 h-6
