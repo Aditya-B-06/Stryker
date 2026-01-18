@@ -2,6 +2,8 @@ import sig226 from "./images/ProductImages/226X-9-Legion.png";
 import flux from "./images/ProductImages/365FLUX-RXSL-LEFT.png"
 import xr1991 from "./images/ProductImages/SIG-1911XR-E-comm-LEFT.png"
 
+import cz75b from "./images/ProductImages/czm.png"
+
 export const products = [
   {
     id: 1,
@@ -9,7 +11,7 @@ export const products = [
     price: 500,
     qty: 0,
     image: sig226,
-    desc: "The P226 X-Five Legion is a full-sized, all-metal, 9mm semi-automatic pistol...",
+    desc: "Elite, full-sized service pistol featuring an enhanced short-reset trigger, G10 grips, and X-RAY3 night sights.",
     country: "Switzerland",
     video: "PO4TJaxXQ8Y",
     supplier: "SIG Sauer",
@@ -21,7 +23,7 @@ export const products = [
     price: 450,
     qty: 0,
     image:flux,
-    desc: "A rapid-deploy micro-PDW chassis that transforms a P365 pistol...",
+    desc: "Compact PDW hybrid featuring a spring-deployed brace, 6-inch barrel, dual magazine system, and pre-installed optic",
     country: "Switzerland",
     video: "",
     supplier: "SIG Sauer",
@@ -34,7 +36,7 @@ export const products = [
     price: 300,
     qty: 0,
     image:xr1991,
-    desc: "Optics-ready stainless 1911 featuring a 5 inch barrel, flat-blade trigger...",
+    desc: "Modernized .45 ACP 1911 featuring an optic-ready slide, flat trigger, and railed stainless steel frame.",
     country: "Switzerland",
     video: "",
     supplier: "SIG Sauer",
@@ -42,14 +44,42 @@ export const products = [
   },
   {
     id: 4,
-    name: "320X5-9",
+    name: "P320",
     price: 1_399,
     qty: 0,
     image:"https://cdn.bfldr.com/EN1VTHA0/at/gxk5hx9ptzn57h7qpjk9xq6t/320X5-9-MAXM2_LEFT.png?auto=webp&format=png",
-    desc:"Competition-tuned 9mm with tungsten TXG grip, 5 inch  bull barrel, and factory ROMEO3MAX optic. Features a flat skeletonized trigger and four 21-round magazines for elite performance.",
+    desc:"Modular, striker-fired pistol featuring a serialized trigger group for easy caliber and frame size customization.",
     video: "",
     supplier: "SIG Sauer",
     type: "light-arm",
+  },
+    /*
+  {
+    id: 5,
+    name:"CZ P10C",
+    price:450,
+    qty: 0,
+    image:czp10c,
+    desc:"Highly ergonomic, striker-fired polymer pistol with a crisp trigger, short reset, and exceptional reliability.",
+    country: "czech-republic",
+    video: "",
+    supplier: "Colt",
+    type: "light-arm",
+  },
+  */
+
+  {
+    id: 6,
+    name: "CZ 75B",
+    price:800,
+    qty: 0,
+    image:cz75b,
+    desc:"Iconic, all-steel DA/SA 9mm with slide-in-frame design for low recoil and legendary accuracy.",
+    country: "czech-republic",
+    video: "",
+    supplier: "Colt",
+    type: "light-arm",
+
   }
 
 ];

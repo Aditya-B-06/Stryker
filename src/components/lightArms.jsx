@@ -3,7 +3,7 @@ import { products } from "../AllProducts.js";
 import { useDispatch, useSelector } from "react-redux";
 import {addTocart, removeFromCart, increaseQty, decreaseQty,} from "../slices/cartSlice.js";
 import { Trash, Plus, Minus, Heart } from "lucide-react";
-import {color} from "motion";
+import {motion} from "framer-motion";
 import {addToWishList,removeFromWishList} from "../slices/wishSlice.js";
 
 
@@ -45,14 +45,17 @@ export default function LightArms() {
           Lightweight and small, ideal for short-ranged combat
         </p>
 
-        <div className="max-w-7xl mx-auto px-6">
+        <motion.div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
           {products.map((item) => {
             const cartItem = cartItems.find((p) => p.id === item.id);
               return (
-                  <div key={item.id}
-                       className="w-full p-6 rounded-xl shadow-xl bg-black border border-zinc-800 hover:border-white transition-all duration-300 hover:scale-105 group flex flex-col"
-                  >
+                  <motion.div key={item.id}
+                              className="w-full p-6 rounded-xl shadow-xl bg-black border border-zinc-800 hover:border-white transition-all duration-300 hover:scale-105 group flex flex-col"
+                              initial={{ opacity: 0, y: 40 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: false, amount: 0.2 }}
+                              transition={{ duration: 0.8, ease: "easeOut" }}>
                       <div className="relative overflow-hidden rounded-lg mb-6">
                           <img
                               src={item.image}
@@ -123,13 +126,13 @@ export default function LightArms() {
 
                           <div className="text-white font-bold">${item.price}</div>
                       </div>
-                  </div>
+                  </motion.div>
               );
 
 
           })}
         </div>
-        </div>
+        </motion.div>
       </div>
 
 
