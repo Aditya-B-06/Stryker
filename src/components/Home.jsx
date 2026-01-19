@@ -1,4 +1,4 @@
-
+import heroImg from '../images/heroImg.jpg'
 import './Home.css'
 import Reasons from './Reasons'
 import AutoPlayCarousel from './carousel'
@@ -17,7 +17,7 @@ function Home() {
   return (
     <div>
       <div className='hero'>
-      <img src="src\images\heroImg.jpg" className='hero-img'/>
+      <img src={heroImg} className='hero-img'/>
         <div className='hero-content'>
           <h1> Stryker</h1>
           <p>Precision. Power. Delivered.</p>

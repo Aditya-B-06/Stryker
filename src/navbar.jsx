@@ -2,6 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { ShoppingCart, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import {useSelector} from "react-redux";
+import myLogo from "./images/myLogo.png";
 
 export default function NavBar() {
   const location = useLocation();
@@ -20,7 +21,7 @@ export default function NavBar() {
     <header className="flex items-center justify-between px-6 py-6 border-3 rounded-4xl">
       <div className="flex items-center gap-4 pr-10">
         <img
-          src="/src/images/myLogo.png"
+          src={myLogo}
           alt="Logo"
           className="w-15"
         />

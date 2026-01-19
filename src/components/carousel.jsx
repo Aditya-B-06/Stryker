@@ -1,9 +1,15 @@
-// AutoPlayCarousel.jsx
+
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import "./AutoPlayCarousel.css"; // We'll create this CSS file
+import "./AutoPlayCarousel.css";
+import hk from '../images/hk-logo-1.svg'
+import colt from '../images/colt.png'
+import sig from '../images/sig.png'
+import smith from '../images/s&w.png'
+import glock from '../images/glock.png'
+import beretta from '../images/beretta.png'
 
 function AutoPlayCarousel() {
   const settings = {
@@ -31,22 +37,22 @@ function AutoPlayCarousel() {
     <div className="slider-container">
       <Slider {...settings}>
         <div className="slide">
-          <img src="src/images/colt.png" alt="colt" />
+          <img src={colt} alt="colt" />
         </div>
         <div className="slide">
-          <img src="src\images\hk-logo-1.svg" alt="h&k" />
+          <img src={hk} alt="h&k" />
         </div>
         <div className="slide">
-          <img src="src\images\sig.png" alt="sig" />
+          <img src={sig} alt="sig" />
         </div>
         <div className="slide">
-          <img src="src/images/s&w.png" alt="smith" />
+          <img src={smith} alt="smith" />
         </div>
         <div className="slide"> 
-          <img src="src\images\glock.png" alt="glock" />
+          <img src={glock} alt="glock" />
         </div>
         <div className="slide">
-          <img src="src\images\beretta.png" alt="beretta" />
+          <img src={beretta} alt="beretta" />
         </div>
 
       </Slider>
