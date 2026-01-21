@@ -62,23 +62,20 @@ export default function LightArms() {
                               alt={item.name}
                               className="object-cover object-center w-full h-48 transition-transform duration-300 group-hover:scale-110"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
 
                       <div className="mb-4">
       <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white text-black rounded-full mb-3">
         {item.supplier}
       </span>
-
                           <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-200">
                               {item.name}
                           </h2>
                       </div>
-
                       <p className="text-gray-400 text-sm leading-relaxed mb-6">
                           {item.desc}
                       </p>
-
                       <div className="mt-auto flex items-center justify-between">
                           {cartItem ? (
                               <div className="flex items-center gap-2">
@@ -88,7 +85,6 @@ export default function LightArms() {
                                   >
                                       <Trash size={16} />
                                   </button>
-
                                   <div className="flex items-center gap-1 bg-white text-black rounded-full px-2 py-1">
                                       <button
                                           onClick={() => handleDecrease(item.id)}
@@ -115,7 +111,6 @@ export default function LightArms() {
                                   Add To Cart
                               </button>
                           )}
-
                           <Heart
                               size={28}
                               fill={liked[item.id] ? "red" : "none"}
@@ -128,8 +123,6 @@ export default function LightArms() {
                       </div>
                   </motion.div>
               );
-
-
           })}
         </div>
         </motion.div>
