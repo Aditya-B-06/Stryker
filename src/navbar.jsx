@@ -3,11 +3,13 @@ import { ShoppingCart, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import {useSelector} from "react-redux";
 import myLogo from "./images/myLogo.png";
+import {useState} from "react";
+import CartModal from "./components/CartModal";
 
 export default function NavBar() {
   const location = useLocation();
   const displayNos = useSelector((state)=>(state.cart.cartSize))
-
+  const [showModal, setShowModal] = useState(false);
   const displayLiked = useSelector((state)=>state.wish.wishListQty)
   const links = [
     { name: "Home", path: "/home" },
@@ -70,7 +72,8 @@ export default function NavBar() {
         </div>
 
         <div className="relative">
-          <ShoppingCart className="text-white size-10" />
+          <button className="hover:bg-blue-500" onClick={()=>setShowModal(true)}><ShoppingCart className="text-white size-10" /></button>
+          {showModal && (<CartModal onClose={()=>setShowModal(false)} />)}
           <div className="absolute -top-1 -right-1 w-6 h-6
                     bg-red-600 text-white
                     flex items-center justify-center
