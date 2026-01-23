@@ -11,6 +11,7 @@ function CartModal({onClose}) {
         }
     }
     const cartItems = useSelector((state) => state.cart.cart);
+    const cartPrice = useSelector((state) => state.cart.cartPrice);
     return(
         <div ref = {modalRef} onClick={closeModal} className=' fixed inset-0 z-9999 bg-black/80 backdrop-blur-sm flex items-center justify-center '>
             <div className="flex w-full justify-center px-4" onClick={(e)=>e.stopPropagation()}>
@@ -25,7 +26,7 @@ function CartModal({onClose}) {
                         {cartItems.filter(item => item.qty>0).map(item =>(
                             <li key={item.id} className="mb-8">
                                <div className="flex flex-row border-2 border-white rounded-md items-start">
-                                   <img className="w-full max-w-70 h-auto mx-auto  block " src={item.image} alt="Item image"/>
+                                   <img className="w-full max-w-70 h-auto mx-auto  block " src={item.image} alt="Item image" loading="lazy"/>
                                    <div className="flex flex-col justify-start p-4">
                                        <h2 className="text-2xl mb-5">{item.name}</h2>
                                        <p className="text-sm text-gray-300">{item.desc}</p>
@@ -38,6 +39,11 @@ function CartModal({onClose}) {
                             </li>
                         ))}
                         </ul>
+                    </div>
+                    <hr className="my-4 border-blue-500" />
+                    <div className="flex flex-row justify-between align-items-center gap-10">
+                        <p className="my-5 text-2xl font-bold">Cart Total : ${cartPrice.toLocaleString("en-us")}</p>
+                        <button className="bg-blue-500 p-3 border-2 border-white rounded-md hover:cursor-pointer hover:bg-black transition-all duration-300 hover:scale-110  ">Proceed to checkout</button>
                     </div>
                     {/* proceed to checkout and total over here */}
                 </div>

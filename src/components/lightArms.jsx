@@ -47,7 +47,7 @@ export default function LightArms() {
 
         <motion.div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
-          {products.map((item) => {
+          {products.filter((item) => item.type==='light-arm').map((item) => {
             const cartItem = cartItems.find((p) => p.id === item.id);
               return (
                   <motion.div key={item.id}
@@ -60,6 +60,7 @@ export default function LightArms() {
                           <img
                               src={item.image}
                               alt={item.name}
+                              loading="lazy"
                               className="object-cover object-center w-full h-48 transition-transform duration-300 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -1,9 +1,14 @@
 import sig226 from "./images/ProductImages/226X-9-Legion.png";
 import flux from "./images/ProductImages/365FLUX-RXSL-LEFT.png"
 import xr1991 from "./images/ProductImages/SIG-1911XR-E-comm-LEFT.png"
-
 import cz75b from "./images/ProductImages/czm.png"
 
+import ak47 from "./images/ProductImagesMedium/AK74.jpg"
+import mga from "./images/ProductImagesMedium/LMG-762-16B-BLK-FLD-MGA.png"
+import mohawk from "./images/ProductImagesMedium/MOHAWK-R516G3-556N-16B.png"
+import mcx from "./images/ProductImagesMedium/MCX-LT-556.png"
+import carbine from "./images/ProductImagesMedium/18.5-KS-K-special-carbine.png"
+import rm400 from "./images/ProductImagesMedium/Sig_RM400-SDI-16B-MSGRN_E-Comm_LEFT.png"
 export const products = [
   {
     id: 1,
@@ -45,7 +50,7 @@ export const products = [
   {
     id: 4,
     name: "P320",
-    price: 1_399,
+    price: 1400,
     qty: 0,
     image:"https://cdn.bfldr.com/EN1VTHA0/at/gxk5hx9ptzn57h7qpjk9xq6t/320X5-9-MAXM2_LEFT.png?auto=webp&format=png",
     desc:"Modular, striker-fired pistol featuring a serialized trigger group for easy caliber and frame size customization.",
@@ -53,7 +58,7 @@ export const products = [
     supplier: "SIG Sauer",
     type: "light-arm",
   },
-    /*
+ /*
   {
     id: 5,
     name:"CZ P10C",
@@ -66,8 +71,8 @@ export const products = [
     supplier: "Colt",
     type: "light-arm",
   },
-  */
 
+*/
   {
     id: 6,
     name: "CZ 75B",
@@ -80,6 +85,72 @@ export const products = [
     supplier: "Colt",
     type: "light-arm",
 
+  },
+  {
+    id: 7,
+    name:"AK 74",
+    price:2100,
+    qty:0,
+    image:ak47,
+    desc:"A Soviet icon chambered in 5.45mm, known for its low recoil and signature muzzle brake.",
+    country:"Russia",
+    supplier:"Kalashnikov",
+    type:"medium-arm"
+  },
+  {
+    id: 8,
+    name:"MGA SAW",
+    price:15_000,
+    qty:0,
+    image:mga,
+    desc:"A versatile, belt-fed 7.62mm light machine gun featuring a folding stock and sixteen-inch barrel.",
+    country:"USA",
+    supplier: "MGA",
+    type:"medium-arm",
+  },
+  {
+    id:9,
+    name:"516 Mohawk",
+    price:2000,
+    qty:0,
+    image:mohawk,
+    desc:"Rugged short-stroke piston rifle featuring ambidextrous controls, adjustable gas system, and unique side charging handle.",
+    country:"USA",
+    supplier: "SIG Sauer",
+    type:"medium-arm",
+  },
+  {
+    id: 10,
+    name:"M400 SDI X",
+    price:1750,
+    qty:0,
+    image:rm400,
+    desc:"Premium direct-impingement rifle featuring fully ambidextrous controls, match trigger, and durable Moss Green finish.",
+    country:"Switzerland",
+    supplier: "SIG Sauer",
+    type:"medium-arm",
+  },
+  {
+    id: 11,
+    name:"MCX Spear-LT",
+    price:2500,
+    qty:0,
+    image:mcx,
+    desc:"Lightweight short-stroke piston rifle featuring a folding stock, ambidextrous controls, and a modular handguard.",
+    country:"Switzerland",
+    supplier: "SIG Sauer",
+    type:"medium-arm",
+  },
+  {
+    id: 12,
+    name:"18,5 KS-K Special Carbine",
+    price:1400,
+    qty:0,
+    image:carbine,
+    desc:"Rugged Russian semi-automatic 12-gauge shotgun featuring a folding stock and high-capacity detachable box magazine.",
+    country:"Russia",
+    supplier: "Kalashnikov",
+    type:"medium-arm",
   }
 
 ];
