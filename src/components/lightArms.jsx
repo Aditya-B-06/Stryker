@@ -120,7 +120,7 @@ export default function LightArms() {
                               onClick={() => handleWishToggle(item)}
                           />
 
-                          <div className="text-white font-bold">${item.price}</div>
+                          <div className="text-white font-bold">${item.price.toLocaleString("en-us")}</div>
                       </div>
                   </motion.div>
               );

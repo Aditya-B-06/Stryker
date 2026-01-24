@@ -7,6 +7,7 @@ import Home from './components/Home.jsx'
 import LightArms from './components/lightArms.jsx'
 import MediumArms from "./components/mediumArms.jsx";
 import Accessories from './components/accessories.jsx'
+import Ammo from './components/Ammo.jsx'
 import LogInForm from "./forms/login.jsx"
 
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
                     { path: "light-arms", element: <LightArms /> },
                     { path: "medium-arms", element: <MediumArms /> },
                     { path: "accessories", element: <Accessories /> },
+                    { path: "ammos", element: <Ammo /> },
                 ],
             },
         ],

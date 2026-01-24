@@ -9,6 +9,14 @@ import mohawk from "./images/ProductImagesMedium/MOHAWK-R516G3-556N-16B.png"
 import mcx from "./images/ProductImagesMedium/MCX-LT-556.png"
 import carbine from "./images/ProductImagesMedium/18.5-KS-K-special-carbine.png"
 import rm400 from "./images/ProductImagesMedium/Sig_RM400-SDI-16B-MSGRN_E-Comm_LEFT.png"
+
+import win from "./images/ammos/winchester.png"
+import w207 from "./images/ammos/w207.jpg"
+import hunt from "./images/ammos/hunting.jpg"
+import venari from "./images/ammos/venari.jpg"
+import legion11 from "./images/ammos/legion.jpg"
+import nato from "./images/ammos/nato.jpg"
+
 export const products = [
   {
     id: 1,
@@ -151,6 +159,66 @@ export const products = [
     country:"Russia",
     supplier: "Kalashnikov",
     type:"medium-arm",
+  },
+  {
+    id:13,
+    name:"0.300 Winchester Magnum",
+    price:50,
+    qty:0,
+    image:win,
+    caliber:0.308,
+    rounds:20,
+    type:"ammo"
+  },
+  {
+    id:14,
+    name:"0.270 Winchester",
+    price:45,
+    qty:0,
+    image:w207,
+    caliber:0.277,
+    rounds:20,
+    type:"ammo",
+  },
+  {
+    id:15,
+    name:"Elite Hunting Platinum Hunter",
+    price:65,
+    qty:0,
+    image:hunt,
+    caliber:0.264,
+    rounds:20,
+    type:"ammo",
+  },
+  {
+    id:16,
+    name:"Sig Sauer Venari",
+    price:40,
+    qty:0,
+    image:venari,
+    caliber:0.284,
+    rounds:20,
+    type:"ammo",
+  },
+  {
+    id:17,
+    name:"365 V-Crown Elite Performance",
+    price:25,
+    qty:0,
+    image:legion11,
+    caliber:"9mm",
+    rounds:20,
+    type:"ammo",
+  },
+  {
+    id:18,
+    name:"M17 Elite Ball",
+    price:30,
+    qty:0,
+    image:nato,
+    caliber:"9mm",
+    rounds:50,
+    type:"ammo"
   }
 
 ];

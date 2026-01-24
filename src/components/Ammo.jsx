@@ -7,7 +7,7 @@ import {motion} from "framer-motion";
 import {addToWishList,removeFromWishList} from "../slices/wishSlice.js";
 
 
-export default function MediumArms() {
+export default function Ammo() {
     const [liked, setLiked] = React.useState({});
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.cart);
@@ -40,13 +40,13 @@ export default function MediumArms() {
     return (
 
         <div>
-            <h1 className="text-center text-4xl font-extrabold m-10">Medium Arms</h1>
+            <h1 className="text-center text-4xl font-extrabold m-10">Ammunition</h1>
             <p className="text-center text-2xl mb-10">
-                Versatile and reliable, optimized for mid-range engagements.
+                Universal and expendable, the vital fuel for ballistic hardware.
             </p>
             <motion.div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
-                    {products.filter((item) => item.type==='medium-arm').map((item) => {
+                    {products.filter((item) => item.type==='ammo').map((item) => {
                         const cartItem = cartItems.find((p) => p.id === item.id);
                         return (
                             <motion.div key={item.id}
@@ -64,16 +64,15 @@ export default function MediumArms() {
                                     />
                                     <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 </div>
+
                                 <div className="mb-4">
-      <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white text-black rounded-full mb-3">
-        {item.supplier}
-      </span>
                                     <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-200">
                                         {item.name}
                                     </h2>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                                    {item.desc}
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex flex-col gap-2">
+                                    <span>Caliber: {item.caliber}</span>
+                                    <span>Quantity: {item.rounds}</span>
                                 </p>
                                 <div className="mt-auto flex items-center justify-between">
                                     {cartItem ? (
@@ -117,7 +116,7 @@ export default function MediumArms() {
                                         className={liked[item.id] ? "text-red-600" : "text-white"}
                                         onClick={() => handleWishToggle(item)}
                                     />
-                                    <div className="text-white font-bold">${item.price.toLocaleString("en-US")}</div>
+                                    <div className="text-white font-bold">${item.price.toLocaleString("en-us")}</div>
                                 </div>
                             </motion.div>
                         );
@@ -125,7 +124,6 @@ export default function MediumArms() {
                 </div>
             </motion.div>
         </div>
-
-
     );
 }
+

@@ -32,7 +32,7 @@ function CartModal({onClose}) {
                                        <p className="text-sm text-gray-300">{item.desc}</p>
                                        <div className="flex flex-row justify-between mt-auto pt-4 ">
                                            <p className="text-sm">Quantity: {item.qty}</p>
-                                           <p className="text-sm font-semibold">Net Price: ${item.qty * item.price}</p>
+                                           <p className="text-sm font-semibold">Net Price: ${(item.qty * item.price).toLocaleString("en-US")}</p>
                                        </div>
                                    </div>
                                </div>
@@ -45,7 +45,6 @@ function CartModal({onClose}) {
                         <p className="my-5 text-2xl font-bold">Cart Total : ${cartPrice.toLocaleString("en-us")}</p>
                         <button className="bg-blue-500 p-3 border-2 border-white rounded-md hover:cursor-pointer hover:bg-black transition-all duration-300 hover:scale-110  ">Proceed to checkout</button>
                     </div>
-                    {/* proceed to checkout and total over here */}
                 </div>
             </div>
             </div>

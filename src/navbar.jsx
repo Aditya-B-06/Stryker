@@ -72,7 +72,7 @@ export default function NavBar() {
         </div>
 
         <div className="relative">
-          <button className="hover:bg-blue-500" onClick={()=>setShowModal(true)}><ShoppingCart className="text-white size-10" /></button>
+          <button className="hover:cursor-pointer duration-300 hover:scale-150 " onClick={()=>setShowModal(true)}><ShoppingCart className="text-white size-10" /></button>
           {showModal && (<CartModal onClose={()=>setShowModal(false)} />)}
           <div className="absolute -top-1 -right-1 w-6 h-6
                     bg-red-600 text-white
