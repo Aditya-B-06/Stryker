@@ -16,6 +16,7 @@
     "formik": "^2.4.9",
     "lucide-react": "^0.562.0",
     "motion": "^12.26.2",
+    "razorpay": "^2.9.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",

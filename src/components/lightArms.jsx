@@ -67,9 +67,9 @@ export default function LightArms() {
                       </div>
 
                       <div className="mb-4">
-      <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white text-black rounded-full mb-3">
-        {item.supplier}
-      </span>
+                          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white text-black rounded-full mb-3">
+                            {item.supplier}
+                          </span>
                           <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-200">
                               {item.name}
                           </h2>

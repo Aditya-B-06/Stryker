@@ -2,6 +2,7 @@ import React from 'react'
 import { X } from 'lucide-react'
 import {useRef} from "react";
 import {useSelector} from "react-redux";
+import {openRazorpayCheckout} from "../services/razorpay.js";
 
 function CartModal({onClose}) {
     const modalRef = useRef();
@@ -43,7 +44,7 @@ function CartModal({onClose}) {
                     <hr className="my-4 border-blue-500" />
                     <div className="flex flex-row justify-between align-items-center gap-10">
                         <p className="my-5 text-2xl font-bold">Cart Total : ${cartPrice.toLocaleString("en-us")}</p>
-                        <button className="bg-blue-500 p-3 border-2 border-white rounded-md hover:cursor-pointer hover:bg-black transition-all duration-300 hover:scale-110  ">Proceed to checkout</button>
+                        <button className="bg-blue-500 p-3 border-2 border-white rounded-md hover:cursor-pointer hover:bg-black transition-all duration-300 hover:scale-110 " onClick={()=>openRazorpayCheckout(cartPrice)}>Proceed to checkout</button>
                     </div>
                 </div>
             </div>

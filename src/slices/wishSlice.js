@@ -17,6 +17,7 @@ export const wishSlice = createSlice({
         state.wishList.push(action.payload)
         state.wishListQty++
       }
+      console.log(state.wishList)
     },
     removeFromWishList:(state,action) =>{
       const exists = state.wishList.some(
