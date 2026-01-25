@@ -18,6 +18,13 @@ import venari from "./images/ammos/venari.jpg"
 import legion11 from "./images/ammos/legion.jpg"
 import nato from "./images/ammos/nato.jpg"
 
+import laser from "./images/accessories/romeomsrgen2.png"
+import thel from "./images/accessories/titaniumHelmet.jpg"
+import sniper from "./images/accessories/Whiskey6FFP.png"
+import knifr from "./images/accessories/Knife.jpg"
+import armor from "./images/accessories/protective_set_4m_systems.jpg"
+import silence from "./images/accessories/HEXIUM556INC.png"
+
 export const products = [
   {
     id: 1,
@@ -219,6 +226,59 @@ export const products = [
     caliber:"9mm",
     rounds:50,
     type:"ammo"
+  },
+  {
+    id:19,
+    name:"Titanium Helmet",
+    price:2500,
+    qty:0,
+    image:thel,
+    type:"access",
+    desc:"Elite ballistic protection featuring a high-strength titanium shell for maximum defense against high-velocity projectiles."
+  },
+  {
+    id:20,
+    name:"SIG Reserve Knife ",
+    price:500,
+    qty:0,
+    image:knifr,
+    type:"access",
+    desc:"A limited-edition fixed blade featuring a premium S45VN steel blade and unique ash burlwood handle."
+  },
+  {
+    id:21,
+    name:"Protective 4M Systems",
+    price:1200,
+    qty:0,
+    image:armor,
+    type:"access",
+    desc:"Comprehensive modular impact-protection system designed for maximum mobility and defense against blunt force trauma."
+  },
+  {
+    id:24,
+    name:"WHISKEY6 3-18x44mm FFP",
+    price:1040,
+    qty:0,
+    image:sniper,
+    type:"access",
+    desc:"Lightweight first-focal-plane hunting scope featuring high-definition glass, locking turrets, and an ultra-reliable zero-stop system."
+  },
+  {
+    id:22,
+    name:"ROMEO-MSR GEN II",
+    price:140,
+    qty:0,
+    image:laser,
+    type:"access",
+    desc:"Compact enclosed red dot featuring a 2 MOA reticle, rotary brightness dial, and see-through mount."
+  },
+  {
+    id:23,
+    name:"HEXIUM 5.56 Inconel Suppressor",
+    price:1000,
+    qty:0,
+    image:silence,
+    type:"access",
+    desc:"Ultra-durable 3D-printed Inconel suppressor designed for high-heat performance, low back-pressure, and maximum service life."
   }
-
 ];

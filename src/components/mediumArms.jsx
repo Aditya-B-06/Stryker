@@ -106,7 +106,5 @@ export default function MediumArms() {
                 </div>
             </motion.div>
         </div>
-
-
     );
 }

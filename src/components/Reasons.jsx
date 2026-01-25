@@ -29,7 +29,9 @@ const body = {
   color: "rgba(255,255,255,0.65)",
   lineHeight: "1.7",
   fontSize: "0.95rem",
-  maxWidth: "520px"
+  textAlign: "justify",
+  textJustify: "inter-word",
+  hyphens: "auto"
 }
 
 function Reasons() {
