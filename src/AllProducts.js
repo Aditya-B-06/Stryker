@@ -2,6 +2,7 @@ import sig226 from "./images/ProductImages/226X-9-Legion.png";
 import flux from "./images/ProductImages/365FLUX-RXSL-LEFT.png"
 import xr1991 from "./images/ProductImages/SIG-1911XR-E-comm-LEFT.png"
 import cz75b from "./images/ProductImages/czm.png"
+import baikal from "./images/ProductImages/baikal.jpg"
 
 import ak47 from "./images/ProductImagesMedium/AK74.jpg"
 import mga from "./images/ProductImagesMedium/LMG-762-16B-BLK-FLD-MGA.png"
@@ -66,21 +67,20 @@ export const products = [
     supplier: "SIG Sauer",
     type: "light-arm",
   },
- /*
+
   {
     id: 5,
-    name:"CZ P10C",
-    price:450,
+    name:"Baikal PLK",
+    price:600,
     qty: 0,
-    image:czp10c,
-    desc:"Highly ergonomic, striker-fired polymer pistol with a crisp trigger, short reset, and exceptional reliability.",
-    country: "czech-republic",
+    image:baikal,
+    desc:"Sleek and ergonomic, a modernized Russian sidearm engineered for high-precision firing and concealed tactical deployment.",
+    country: "russia",
     video: "",
-    supplier: "Colt",
+    supplier: "Kalashnikov",
     type: "light-arm",
   },
 
-*/
   {
     id: 6,
     name: "CZ 75B",

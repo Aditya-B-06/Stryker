@@ -50,7 +50,6 @@ function CartModal({onClose}) {
             </div>
             </div>
         </div>
-
     )
 }
 

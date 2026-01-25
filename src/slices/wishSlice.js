@@ -15,17 +15,17 @@ export const wishSlice = createSlice({
       )
       if (!exists) {
         state.wishList.push(action.payload)
-        state.wishListQty++
+        state.wishListQty= state.wishList.length
       }
       console.log(state.wishList)
     },
     removeFromWishList:(state,action) =>{
-      const exists = state.wishList.some(
+      const index = state.wishList.findIndex(
           item => item.id === action.payload.id
       )
-      if (exists) {
-        state.wishList.pop(action.payload)
-        state.wishListQty--
+      if (index !== -1) {
+        state.wishList.splice(index,1);
+        state.wishListQty= state.wishList.length
       }
     }
   }

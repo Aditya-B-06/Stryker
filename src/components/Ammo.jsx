@@ -8,7 +8,10 @@ import {addToWishList,removeFromWishList} from "../slices/wishSlice.js";
 
 
 export default function Ammo() {
-    const [liked, setLiked] = React.useState({});
+    const wishList = useSelector((state) => state.wish.wishList);
+    const isItemLiked = (itemId) => {
+        return wishList.some(wishItem => wishItem.id === itemId);
+    }
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.cart);
 
@@ -29,13 +32,13 @@ export default function Ammo() {
     };
 
     const handleWishToggle = (item) => {
-        setLiked(prev => ({ ...prev, [item.id]: !prev[item.id] }))
-        if (liked[item.id]) {
-            dispatch(removeFromWishList(item))
+        if (isItemLiked(item.id)) {
+            dispatch(removeFromWishList(item));
         } else {
-            dispatch(addToWishList(item))
+            dispatch(addToWishList(item));
         }
-    }
+    };
+
 
     return (
 
@@ -109,13 +112,7 @@ export default function Ammo() {
                                             Add To Cart
                                         </button>
                                     )}
-                                    <Heart
-                                        size={28}
-                                        fill={liked[item.id] ? "red" : "none"}
-                                        stroke="red"
-                                        className={liked[item.id] ? "text-red-600" : "text-white"}
-                                        onClick={() => handleWishToggle(item)}
-                                    />
+                                    <Heart size={28} fill={isItemLiked(item.id) ? "red" : "none"}  stroke="red" className={isItemLiked(item.id) ? "text-red-600" : "text-white"}  onClick={() => handleWishToggle(item)}/>
                                     <div className="text-white font-bold">${item.price.toLocaleString("en-us")}</div>
                                 </div>
                             </motion.div>

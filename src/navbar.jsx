@@ -5,11 +5,12 @@ import {useSelector} from "react-redux";
 import myLogo from "./images/myLogo.png";
 import {useState} from "react";
 import CartModal from "./components/CartModal";
-
+import WishlistModal from "./components/WishlistModal";
 export default function NavBar() {
   const location = useLocation();
   const displayNos = useSelector((state)=>(state.cart.cartSize))
   const [showModal, setShowModal] = useState(false);
+  const [showWishlist, setShowWishlist] = useState(false);
   const displayLiked = useSelector((state)=>state.wish.wishListQty)
   const links = [
     { name: "Home", path: "/home" },
@@ -61,15 +62,16 @@ export default function NavBar() {
       <div className="flex flex-row gap-5">
 
         <div className="relative hover:cursor-pointer">
-          <Heart className="text-white size-10" />
+          <button className="hover:cursor-pointer duration-300 hover:scale-150 " onClick={()=>setShowWishlist(true)}><Heart className="text-white size-10" /></button>
+          {showWishlist && (<WishlistModal onClose={()=>setShowWishlist(false)} />)}
           <div className="absolute -top-1 -right-1 w-6 h-6
                     bg-red-600 text-white
                     flex items-center justify-center
                     rounded-full">
-
             {displayLiked}
           </div>
         </div>
+
 
         <div className="relative">
           <button className="hover:cursor-pointer duration-300 hover:scale-150 " onClick={()=>setShowModal(true)}><ShoppingCart className="text-white size-10" /></button>

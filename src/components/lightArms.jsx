@@ -8,7 +8,10 @@ import {addToWishList,removeFromWishList} from "../slices/wishSlice.js";
 
 
 export default function LightArms() {
-  const [liked, setLiked] = React.useState({});
+  const wishList = useSelector((state) => state.wish.wishList);
+    const isItemLiked = (itemId) => {
+        return wishList.some(wishItem => wishItem.id === itemId);
+    }
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cart);
 
@@ -28,14 +31,13 @@ export default function LightArms() {
     dispatch(decreaseQty({ id }));
   };
 
-  const handleWishToggle = (item) => {
-        setLiked(prev => ({ ...prev, [item.id]: !prev[item.id] }))
-        if (liked[item.id]) {
-            dispatch(removeFromWishList(item))
+    const handleWishToggle = (item) => {
+        if (isItemLiked(item.id)) {
+            dispatch(removeFromWishList(item));
         } else {
-            dispatch(addToWishList(item))
+            dispatch(addToWishList(item));
         }
-    }
+    };
 
     return (
 
@@ -80,46 +82,25 @@ export default function LightArms() {
                       <div className="mt-auto flex items-center justify-between">
                           {cartItem ? (
                               <div className="flex items-center gap-2">
-                                  <button
-                                      onClick={() => handleRemove(item.id)}
-                                      className="px-2 py-1 bg-red-600 text-white rounded-full hover:bg-red-700 transition"
-                                  >
+                                  <button onClick={() => handleRemove(item.id)} className="px-2 py-1 bg-red-600 text-white rounded-full hover:bg-red-700 transition">
                                       <Trash size={16} />
                                   </button>
                                   <div className="flex items-center gap-1 bg-white text-black rounded-full px-2 py-1">
-                                      <button
-                                          onClick={() => handleDecrease(item.id)}
-                                          className="px-1 hover:bg-gray-200 rounded"
-                                      >
+                                      <button onClick={() => handleDecrease(item.id)} className="px-1 hover:bg-gray-200 rounded">
                                           <Minus size={16} />
                                       </button>
-
                                       <p className="px-2">{cartItem.qty}</p>
-
-                                      <button
-                                          onClick={() => handleIncrease(item.id)}
-                                          className="px-1 hover:bg-gray-200 rounded"
-                                      >
+                                      <button onClick={() => handleIncrease(item.id)} className="px-1 hover:bg-gray-200 rounded">
                                           <Plus size={16} />
                                       </button>
                                   </div>
                               </div>
                           ) : (
-                              <button
-                                  onClick={() => handleAddToCart(item)}
-                                  className="px-4 py-2 bg-white text-black rounded-full hover:scale-110 transition"
-                              >
+                              <button onClick={() => handleAddToCart(item)} className="px-4 py-2 bg-white text-black rounded-full hover:scale-110 transition">
                                   Add To Cart
                               </button>
                           )}
-                          <Heart
-                              size={28}
-                              fill={liked[item.id] ? "red" : "none"}
-                              stroke="red"
-                              className={liked[item.id] ? "text-red-600" : "text-white"}
-                              onClick={() => handleWishToggle(item)}
-                          />
-
+                          <Heart size={28} fill={isItemLiked(item.id) ? "red" : "none"}  stroke="red" className={isItemLiked(item.id) ? "text-red-600" : "text-white"}  onClick={() => handleWishToggle(item)}/>
                           <div className="text-white font-bold">${item.price.toLocaleString("en-us")}</div>
                       </div>
                   </motion.div>
